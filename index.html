@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loading-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .loading-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #e62117;
+            animation: loading 2s linear infinite ;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading-bar"></div>
+    </div>
+    <script>const loadingContainer = document.querySelector('.loading-container');
+
+        // Show the loading animation
+        loadingContainer.style.display = 'block';
+
+        // Hide the loading animation after a delay of 2 seconds
+        setTimeout(() => {
+            loadingContainer.style.display = 'none';
+        }, 2000);
+    </script>
+</body>
+
+</html>
